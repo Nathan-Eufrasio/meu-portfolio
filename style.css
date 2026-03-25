@@ -19,8 +19,12 @@ body { background-color: var(--cor-fundo); color: var(--cor-texto); font-family:
 /* Cabeçalho */
 header { background: rgba(10, 15, 26, 0.9); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #1f2937; backdrop-filter: blur(10px); }
 nav { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-.logo { font-size: 1.5rem; font-weight: 700; color: #fff; }
-.logo span { color: var(--cor-destaque); }
+
+/* AJUSTE DA LOGO IMAGEM */
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-img { height: 45px; width: auto; display: block; transition: 0.3s ease; }
+.logo-img:hover { transform: scale(1.05); }
+
 .nav-links { display: flex; list-style: none; gap: 30px; }
 .nav-links a { color: var(--cor-texto-secundario); text-decoration: none; transition: 0.3s; }
 .nav-links a:hover { color: var(--cor-destaque); }
@@ -71,4 +75,5 @@ footer { padding: 80px 0 40px; border-top: 1px solid #1f2937; }
     .nav-links { display: none; }
     .botoes { flex-direction: column; }
     .btn { width: 100%; justify-content: center; }
+    .logo-img { height: 35px; }
 }
