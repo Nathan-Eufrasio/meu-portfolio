@@ -27,82 +27,59 @@ nav { display: flex; justify-content: space-between; align-items: center; height
 
 /* --- HERO --- */
 #hero { height: 100vh; display: flex; align-items: center; padding-top: 90px; }
-.saudacao { color: var(--cor-destaque); font-weight: 600; }
 h1 { font-size: 3.5rem; line-height: 1.2; margin: 10px 0; }
 .resumo { max-width: 650px; color: var(--cor-texto-secundario); margin-bottom: 30px; }
-.botoes { display: flex; gap: 15px; flex-wrap: wrap; }
-.btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; color: #fff; border: none; cursor: pointer; }
+.btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; color: #fff; border: none; }
 .btn-primary { background: var(--cor-destaque); }
 .btn-secondary { border: 1px solid #374151; background: transparent; }
 .btn-whatsapp { background: var(--cor-whatsapp); }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-/* --- CONHECIMENTOS TÉCNICOS (GRID REVISADO) --- */
+/* --- CONHECIMENTOS TÉCNICOS --- */
 .section-content { padding: 100px 0; }
 .section-title { font-size: 2.2rem; margin-bottom: 50px; color: #fff; border-bottom: 3px solid var(--cor-destaque); display: inline-block; padding-bottom: 10px; }
-
-.skills-grid { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-    gap: 40px; 
-    align-items: start; 
-}
-
-.skill-category h3 { 
-    font-size: 1.3rem; 
-    color: #fff; 
-    margin-bottom: 25px; 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    border-left: 4px solid var(--cor-destaque);
-    padding-left: 10px;
-}
-
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; align-items: start; }
+.skill-category h3 { font-size: 1.3rem; color: #fff; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; border-left: 4px solid var(--cor-destaque); padding-left: 10px; }
 .skill-items { display: flex; flex-direction: column; gap: 12px; }
-
-.skill-card { 
-    background: var(--cor-fundo); 
-    border: 1px solid #1f2937; 
-    padding: 15px 20px; 
-    border-radius: 8px; 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-    transition: 0.3s;
-}
-
+.skill-card { background: var(--cor-fundo); border: 1px solid #1f2937; padding: 15px 20px; border-radius: 8px; display: flex; align-items: center; gap: 15px; transition: 0.3s; }
 .skill-card i { color: var(--cor-destaque); font-size: 1.4rem; width: 25px; text-align: center; }
 .skill-card:hover { border-color: var(--cor-destaque); background: #162033; transform: translateX(5px); }
 
-/* --- PROJETOS (SEM ROXO) --- */
+/* --- PORTFÓLIO DE PROJETOS (FIX DE SIMETRIA) --- */
 .projetos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.projeto-card { background: var(--cor-fundo-alt); padding: 30px; border-radius: 12px; border: 1px solid #1f2937; transition: 0.3s; }
+.projeto-card { 
+    background: var(--cor-fundo-alt); 
+    padding: 35px; 
+    border-radius: 12px; 
+    border: 1px solid #1f2937; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; /* Mantém o link no rodapé do card */
+    min-height: 400px; /* Alinha a altura de todos os cards */
+    transition: 0.3s;
+}
 .projeto-card:hover { border-color: var(--cor-destaque); transform: translateY(-5px); }
+.badge { background: var(--cor-destaque); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; margin-bottom: 15px; display: inline-block; }
+.projeto-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.projeto-tags span { background: #1e293b; color: var(--cor-destaque); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; }
 
+/* FIX: LINK GITHUB SEMPRE BRANCO/AZUL */
 .projeto-links a, .projeto-links a:visited { 
     color: #fff !important; 
     text-decoration: none; 
     font-weight: 600; 
     display: inline-flex; 
     align-items: center; 
-    gap: 8px; 
-    margin-top: 15px;
+    gap: 10px; 
+    margin-top: 25px;
+    font-size: 0.9rem;
 }
 .projeto-links a:hover { color: var(--cor-destaque) !important; }
-.projeto-tags span { background: #1e293b; color: var(--cor-destaque); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; margin-right: 8px; }
-
-/* --- TIMELINE --- */
-.timeline { border-left: 2px solid var(--cor-destaque); padding-left: 30px; }
-.timeline-item { position: relative; margin-bottom: 40px; }
-.timeline-item::before { content: ''; position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--cor-destaque); border: 2px solid var(--cor-fundo); }
 
 /* --- FOOTER --- */
-footer { padding: 80px 0 40px; border-top: 1px solid #1f2937; background: var(--cor-fundo-alt); }
-.contato-links { display: flex; justify-content: center; gap: 20px; margin: 30px 0; flex-wrap: wrap; }
-.direitos { margin-top: 40px; color: var(--cor-texto-secundario); font-size: 0.8rem; }
+footer { padding: 80px 0 40px; border-top: 1px solid #1f2937; }
+.contato-links { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
 
-/* --- RESPONSIVIDADE --- */
 @media (max-width: 992px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
