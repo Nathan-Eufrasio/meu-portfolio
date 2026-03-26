@@ -41,7 +41,7 @@ body {
     text-align: center; 
 }
 
-/* --- CABEÇALHO E LOGO (AJUSTADOS) --- */
+/* --- CABEÇALHO E LOGO --- */
 header { 
     background: rgba(10, 15, 26, 0.95); 
     position: fixed; 
@@ -56,7 +56,7 @@ nav {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    height: 100px; /* Aumentado para dar espaço à logo */
+    height: 90px; /* Altura ideal para a logo aparecer bem */
 }
 
 .logo-link { 
@@ -66,15 +66,16 @@ nav {
 }
 
 .logo-img { 
-    height: 70px; /* TAMANHO AUMENTADO PARA A LOGO APARECER BEM */
+    height: 65px; /* Tamanho que mantém a logo imponente sem exagerar */
     width: auto; 
     display: block; 
-    transition: transform 0.3s ease;
-    image-rendering: -webkit-optimize-contrast; /* Melhora a nitidez */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    image-rendering: -webkit-optimize-contrast; /* Máxima nitidez */
 }
 
 .logo-img:hover { 
-    transform: scale(1.05); 
+    transform: scale(1.03); 
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4)); /* Leve brilho azul no hover */
 }
 
 .nav-links { 
@@ -96,7 +97,7 @@ nav {
 
 .btn-nav { 
     border: 1px solid var(--cor-destaque); 
-    padding: 8px 16px; 
+    padding: 8px 18px; 
     border-radius: 50px; 
     color: var(--cor-destaque) !important; 
     text-decoration: none; 
@@ -107,7 +108,7 @@ nav {
     height: 100vh; 
     display: flex; 
     align-items: center; 
-    padding-top: 100px; 
+    padding-top: 90px; 
 }
 
 .saudacao { 
@@ -311,10 +312,11 @@ footer {
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.4rem; }
     .nav-links { display: none; }
     .botoes { flex-direction: column; }
     .btn { width: 100%; justify-content: center; }
     
     nav { height: auto; padding: 15px 20px; }
-    .logo-img { height: 45px; } 
+    .logo-img { height: 40px; } /* Logo menor no mobile para não ocupar a tela toda */
 }
