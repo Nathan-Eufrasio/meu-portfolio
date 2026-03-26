@@ -18,51 +18,52 @@ body { background-color: var(--cor-fundo); color: var(--cor-texto); font-family:
 .bg-escuro { background-color: var(--cor-fundo-alt); }
 .text-center { text-align: center; }
 
-/* --- CABEÇALHO E LOGO --- */
+/* --- CABEÇALHO --- */
 header { background: rgba(10, 15, 26, 0.95); position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid #1f2937; backdrop-filter: blur(10px); }
-nav { display: flex; justify-content: space-between; align-items: center; height: 100px; /* Altura ajustada para dar espaço */ }
-.logo-link { display: flex; align-items: center; text-decoration: none; height: 100%; /* Centralização vertical total */ }
-.logo-img { height: 75px; /* Tamanho que mantém a logo imponente sem exagerar */ width: auto; display: block; transition: 0.3s ease; image-rendering: -webkit-optimize-contrast; }
+nav { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+.logo-link { display: flex; align-items: center; text-decoration: none; }
+.logo-img { height: 60px; width: auto; display: block; transition: 0.3s ease; image-rendering: -webkit-optimize-contrast; }
 .logo-img:hover { transform: scale(1.03); }
 
-.nav-links { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
 .nav-links a { color: var(--cor-texto-secundario); text-decoration: none; transition: 0.3s; font-weight: 500; }
 .nav-links a:hover { color: var(--cor-destaque); }
 .btn-nav { border: 1px solid var(--cor-destaque); padding: 8px 18px; border-radius: 50px; color: var(--cor-destaque) !important; text-decoration: none; }
 
 /* --- HERO SECTION --- */
-#hero { height: 100vh; display: flex; align-items: center; padding-top: 100px; /* Desconto do header */ }
-.hero-content { display: flex; flex-direction: column; gap: 20px; /* Espaçamento suave entre elementos */ }
-.saudacao { color: var(--cor-destaque); font-weight: 600; margin-bottom: 0; }
-h1 { font-size: 3.5rem; margin-bottom: 0; line-height: 1.2; }
-h2 { font-size: 1.8rem; color: var(--cor-texto-secundario); margin-bottom: 10px; font-weight: 400; }
-.resumo { max-width: 650px; margin-bottom: 20px; color: var(--cor-texto-secundario); font-size: 1.1rem; }
+#hero { height: 100vh; display: flex; align-items: center; padding-top: 90px; }
+.hero-content { display: flex; flex-direction: column; gap: 20px; }
+.saudacao { color: var(--cor-destaque); font-weight: 600; }
+h1 { font-size: 3.5rem; line-height: 1.2; }
+h2 { font-size: 1.8rem; color: var(--cor-texto-secundario); font-weight: 400; }
+.resumo { max-width: 650px; color: var(--cor-texto-secundario); font-size: 1.1rem; margin-bottom: 10px; }
 
 /* --- BOTÕES --- */
-.botoes { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 10px; /* Afasta um pouco dos textos */ }
-.btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; font-size: 0.9rem; border: none; cursor: pointer; }
-.btn-primary { background: var(--cor-destaque); color: #fff; }
-.btn-secondary { border: 1px solid #374151; color: #fff; background: transparent; }
-.btn-whatsapp { background: var(--cor-whatsapp); color: #fff; }
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); opacity: 0.9; }
+.botoes { display: flex; gap: 15px; flex-wrap: wrap; }
+.btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; font-size: 0.9rem; border: none; cursor: pointer; color: #fff; }
+.btn-primary { background: var(--cor-destaque); }
+.btn-secondary { border: 1px solid #374151; background: transparent; }
+.btn-whatsapp { background: var(--cor-whatsapp); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-/* --- SEÇÃO DE SKILLS (HABILIDADES) --- */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; /* Mais espaço entre categorias */ margin-top: 40px; }
-.skill-category { text-align: left; /* Alinhamento à esquerda padrão */ }
-.skill-category h3 { font-size: 1.4rem; color: #fff; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; }
-.skill-category h3 i { color: var(--cor-destaque); font-size: 1.6rem; }
-.skill-items { display: flex; flex-wrap: wrap; gap: 15px; }
-.skill-card { background: var(--cor-fundo); border: 1px solid #1f2937; padding: 15px 25px; border-radius: 10px; display: flex; align-items: center; gap: 12px; font-weight: 500; transition: 0.3s; }
-.skill-card i { font-size: 1.6rem; color: var(--cor-destaque); }
-.skill-card span { color: var(--cor-texto); }
-.skill-card:hover { border-color: var(--cor-destaque); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2); }
+/* --- CONHECIMENTOS TÉCNICOS (SKILLS AJUSTADO) --- */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 40px; }
+.skill-category h3 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-left: 4px solid var(--cor-destaque); padding-left: 10px; }
+.skill-items { display: flex; flex-direction: column; gap: 10px; } /* Mudado para coluna para alinhar melhor */
+.skill-card { background: var(--cor-fundo-alt); border: 1px solid #1f2937; padding: 12px 20px; border-radius: 8px; display: flex; align-items: center; gap: 12px; transition: 0.3s; width: 100%; max-width: 250px; }
+.skill-card i { font-size: 1.3rem; color: var(--cor-destaque); width: 25px; text-align: center; }
+.skill-card:hover { border-color: var(--cor-destaque); background: #162033; }
 
-/* --- SEÇÕES E PROJETOS --- */
+/* --- PORTFÓLIO DE PROJETOS --- */
 .section-content { padding: 100px 0; }
 .section-title { font-size: 2.2rem; margin-bottom: 50px; color: #fff; border-bottom: 3px solid var(--cor-destaque); display: inline-block; padding-bottom: 10px; }
 .projetos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.projeto-card { background: var(--cor-fundo); padding: 30px; border-radius: 12px; border: 1px solid #1f2937; transition: 0.3s; }
+.projeto-card { background: var(--cor-fundo-alt); padding: 30px; border-radius: 12px; border: 1px solid #1f2937; transition: 0.3s; }
 .projeto-card:hover { border-color: var(--cor-destaque); transform: translateY(-5px); }
+
+/* CORREÇÃO DO LINK DO GITHUB NO PROJETO */
+.projeto-links a { color: var(--cor-texto) !important; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.projeto-links a:hover { color: var(--cor-destaque) !important; }
 .projeto-tags span { background: #1e293b; color: var(--cor-destaque); padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; margin-right: 8px; }
 
 /* --- TIMELINE DE FORMAÇÃO --- */
@@ -77,12 +78,8 @@ footer { padding: 80px 0 40px; border-top: 1px solid #1f2937; }
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.4rem; }
     .nav-links { display: none; }
-    .botoes { flex-direction: column; gap: 10px; }
-    .btn { width: 100%; justify-content: center; }
-    
     nav { height: auto; padding: 15px 20px; }
-    .logo-img { height: 45px; } 
-    .skills-grid { grid-template-columns: 1fr; gap: 40px; }
+    .logo-img { height: 45px; }
+    .skill-card { max-width: 100%; }
 }
