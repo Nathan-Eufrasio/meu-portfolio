@@ -377,8 +377,15 @@ h3 {
 }
 
 .preview-acolhe {
-    background: var(--soft);
-    color: var(--ink);
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.acolhe-preview-image {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
 }
 
 .project-info {
